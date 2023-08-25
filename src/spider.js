@@ -452,7 +452,7 @@ function RadarChart(id, data, options, moreData, colorSeries, originalData, axes
 		});
 	//Set up the small tooltip for when you hover over a circle
 	var tooltip = g.append("text")
-		.attr("class", "tooltip")
+		.attr("class", "tooltip tooltip-ldp")
 		.style("opacity", 0);
   
   	/////////////////////////////////////////////////////////
@@ -460,7 +460,7 @@ function RadarChart(id, data, options, moreData, colorSeries, originalData, axes
 	/////////////////////////////////////////////////////////
 	var style = document.createElement('style');
 	style.type = 'text/css';
-	style.innerHTML = 'g.radarWrapper.hidden { opacity: 0.0; } .legendCells .hidden { opacity: 0.2;text-align:center }';
+	style.innerHTML = 'g.radarWrapper.hidden { opacity: 0.0; } .legendCells .hidden { opacity: 0.2;text-align:center } .tooltip-ldp { color: white }';
   
     var ordinal = d3.scale.ordinal()
 	    .domain(moreData.map(d => d.label))
